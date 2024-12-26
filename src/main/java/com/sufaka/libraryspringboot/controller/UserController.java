@@ -20,6 +20,7 @@ public class UserController {
             return ResponseEntity.badRequest().body("Bu e-posta zaten kullanılıyor!");
         }
 
+        //Kullanıcı kaydedilirken rol kaydedilmeyecek.
         userRepository.save(user);
         return ResponseEntity.ok("Kullanıcı başarıyla kaydedildi!");
     }

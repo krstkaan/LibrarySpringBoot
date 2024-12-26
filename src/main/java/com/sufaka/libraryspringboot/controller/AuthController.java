@@ -21,7 +21,7 @@ public class AuthController {
             return ResponseEntity.status(401).body("Geçersiz email veya şifre");
         }
 
-        String token = JwtUtil.generateToken(existingUser.getEmail());
+        String token = JwtUtil.generateToken(existingUser.getEmail(), existingUser.getRole());
         return ResponseEntity.ok(token);
     }
 }
