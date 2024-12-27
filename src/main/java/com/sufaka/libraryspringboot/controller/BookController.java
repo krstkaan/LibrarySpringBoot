@@ -43,6 +43,7 @@ public class BookController {
             book.setAuthor(bookDetails.getAuthor());
             book.setPublishedDate(bookDetails.getPublishedDate());
             book.setIsbn(bookDetails.getIsbn());
+            book.setPhotoUrl(bookDetails.getPhotoUrl()); // Fotoğraf URL'sini güncelle
             return bookRepository.save(book);
         }
         return null;
